@@ -190,7 +190,6 @@ class HandleByExecutionBuilder<PayloadType>(
                         """.trimIndent(),
                         throwable)
 
-                log.error(exc) {}
                 executionResultFuture.completeExceptionally(exc)
 
                 pvx.handlingFuture.complete(HandlePayloadContext(isTerminal = true))
